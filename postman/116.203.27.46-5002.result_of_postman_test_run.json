@@ -1,0 +1,308 @@
+{
+	"id": "22f51b5a-9ea1-4ed2-ace5-10645206508f",
+	"name": "http://116.203.27.46:5002/",
+	"timestamp": "2021-06-15T15:14:38.331Z",
+	"collection_id": "2d340273-9e94-4b55-99c0-748231b304a2",
+	"folder_id": 0,
+	"environment_id": "ce609b4c-d13c-4835-9d3e-a3d112fbd718",
+	"totalPass": 14,
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "6f1cfa5a-aa89-4b4e-a925-938805d0f999",
+			"name": "login",
+			"url": "http://116.203.27.46:5002/login",
+			"time": 94,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is OK and format is JSON": true
+			},
+			"testPassFailCounts": {
+				"Status code is OK and format is JSON": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				94
+			],
+			"allTests": [
+				{
+					"Status code is OK and format is JSON": true
+				}
+			]
+		},
+		{
+			"id": "565252ef-f78d-4dc6-8a79-e4d3a974be9b",
+			"name": "login (new test)",
+			"url": "http://116.203.27.46:5002/login",
+			"time": 357,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is OK and format is JSON": true
+			},
+			"testPassFailCounts": {
+				"Status code is OK and format is JSON": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				357
+			],
+			"allTests": [
+				{
+					"Status code is OK and format is JSON": true
+				}
+			]
+		},
+		{
+			"id": "61fcf032-9e11-4849-8924-d5978f0b0ef1",
+			"name": "user_info",
+			"url": "http://116.203.27.46:5002/user_info",
+			"time": 96,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is OK and format is JSON": true,
+				"Validate schema": true,
+				"Check all index salary": true
+			},
+			"testPassFailCounts": {
+				"Status code is OK and format is JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check all index salary": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				96
+			],
+			"allTests": [
+				{
+					"Status code is OK and format is JSON": true,
+					"Validate schema": true,
+					"Check all index salary": true
+				}
+			]
+		},
+		{
+			"id": "be5e4a70-b0a2-4d2f-a0ff-046c2165c847",
+			"name": "new_data",
+			"url": "http://116.203.27.46:5002/new_data",
+			"time": 95,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is OK and format is JSON": true,
+				"Validate schema": true,
+				"Check all index salary": true,
+				"Check_all_index_array": true
+			},
+			"testPassFailCounts": {
+				"Status code is OK and format is JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check all index salary": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check_all_index_array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				95
+			],
+			"allTests": [
+				{
+					"Status code is OK and format is JSON": true,
+					"Validate schema": true,
+					"Check all index salary": true,
+					"Check_all_index_array": true
+				}
+			]
+		},
+		{
+			"id": "e0df8e25-942b-45c8-bf20-d4d0350058ad",
+			"name": "test_pet_info",
+			"url": "http://116.203.27.46:5002/test_pet_info",
+			"time": 91,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is OK and format is JSON": true,
+				"Validate schema": true,
+				"Check weight": true
+			},
+			"testPassFailCounts": {
+				"Status code is OK and format is JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check weight": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				91
+			],
+			"allTests": [
+				{
+					"Status code is OK and format is JSON": true,
+					"Validate schema": true,
+					"Check weight": true
+				}
+			]
+		},
+		{
+			"id": "3d383a4e-c544-411e-9b64-660da81c2e8b",
+			"name": "get_test_user",
+			"url": "http://116.203.27.46:5002/get_test_user",
+			"time": 102,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is OK and format is JSON": true
+			},
+			"testPassFailCounts": {
+				"Status code is OK and format is JSON": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				102
+			],
+			"allTests": [
+				{
+					"Status code is OK and format is JSON": true
+				}
+			]
+		},
+		{
+			"id": "f9415968-106f-4a2b-9007-0d886804427f",
+			"name": "currency",
+			"url": "http://116.203.27.46:5002/currency",
+			"time": 582,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is OK and format is JSON": true
+			},
+			"testPassFailCounts": {
+				"Status code is OK and format is JSON": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				582
+			],
+			"allTests": [
+				{
+					"Status code is OK and format is JSON": true
+				}
+			]
+		},
+		{
+			"id": "47681093-48e7-4d4f-95cc-da1405701096",
+			"name": "curr_byn",
+			"url": "http://116.203.27.46:5002/curr_byn",
+			"time": 142,
+			"responseCode": {
+				"code": 500,
+				"name": "INTERNAL SERVER ERROR"
+			},
+			"tests": {
+				"Status code is OK and format is JSON": false
+			},
+			"testPassFailCounts": {
+				"Status code is OK and format is JSON": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				142
+			],
+			"allTests": [
+				{
+					"Status code is OK and format is JSON": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1559,
+	"collection": {
+		"requests": [
+			{
+				"id": "6f1cfa5a-aa89-4b4e-a925-938805d0f999",
+				"method": "POST"
+			},
+			{
+				"id": "565252ef-f78d-4dc6-8a79-e4d3a974be9b",
+				"method": "POST"
+			},
+			{
+				"id": "61fcf032-9e11-4849-8924-d5978f0b0ef1",
+				"method": "POST"
+			},
+			{
+				"id": "be5e4a70-b0a2-4d2f-a0ff-046c2165c847",
+				"method": "POST"
+			},
+			{
+				"id": "e0df8e25-942b-45c8-bf20-d4d0350058ad",
+				"method": "POST"
+			},
+			{
+				"id": "3d383a4e-c544-411e-9b64-660da81c2e8b",
+				"method": "POST"
+			},
+			{
+				"id": "f9415968-106f-4a2b-9007-0d886804427f",
+				"method": "POST"
+			},
+			{
+				"id": "47681093-48e7-4d4f-95cc-da1405701096",
+				"method": "POST"
+			}
+		]
+	}
+}
