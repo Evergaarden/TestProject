@@ -187,61 +187,7 @@
 					]
 				}
 			},
-			"response": [
-				{
-					"name": "saved response user_info",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"age\": 24,\r\n    \"salary\": 60000,\r\n    \"name\": \"Bogdan\",\r\n    \"auth_token\": \"{{token}}\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://116.203.27.46:5002/user_info",
-							"protocol": "http",
-							"host": [
-								"116",
-								"203",
-								"27",
-								"46"
-							],
-							"port": "5002",
-							"path": [
-								"user_info"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "246"
-						},
-						{
-							"key": "Server",
-							"value": "Werkzeug/0.15.6 Python/3.8.5"
-						},
-						{
-							"key": "Date",
-							"value": "Mon, 14 Jun 2021 15:26:09 GMT"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"person\": {\n        \"u_age\": 24,\n        \"u_name\"^ [\n            \"Bogdan\",\n            60000,\n            24\n        ],\n        \"u_salary_1_5_year\": 240000\n    },\n    \"qa_salary_after_12_months\": 174000,\n    \"qa_salary_after_6_months\": 120000,\n    \"start_qa_salary\": 60000\n}"
-				}
-			]
+			"response": []
 		},
 		{
 			"name": "new_data",
@@ -332,77 +278,7 @@
 					]
 				}
 			},
-			"response": [
-				{
-					"name": "saved response new_data",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "age",
-									"value": "24",
-									"type": "text"
-								},
-								{
-									"key": "salary",
-									"value": "60000",
-									"type": "text"
-								},
-								{
-									"key": "name",
-									"value": "Bogdan",
-									"type": "text"
-								},
-								{
-									"key": "auth_token",
-									"value": "{{token}}",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://116.203.27.46:5002/new_data",
-							"protocol": "http",
-							"host": [
-								"116",
-								"203",
-								"27",
-								"46"
-							],
-							"port": "5002",
-							"path": [
-								"new_data"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "97"
-						},
-						{
-							"key": "Server",
-							"value": "Werkzeug/0.15.6 Python/3.8.5"
-						},
-						{
-							"key": "Date",
-							"value": "Mon, 14 Jun 2021 19:58:17 GMT"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"age\": 24,\n    \"name\": \"Bogdan\",\n    \"salary\": [\n        60000,\n        \"120000\",\n        \"180000\"\n    ]\n}"
-				}
-			]
+			"response": []
 		},
 		{
 			"name": "test_pet_info",
@@ -482,80 +358,95 @@
 					]
 				}
 			},
-			"response": [
-				{
-					"name": "saved response test_pet_info",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "age",
-									"value": "24",
-									"type": "text"
-								},
-								{
-									"key": "weight",
-									"value": "65",
-									"type": "text"
-								},
-								{
-									"key": "name",
-									"value": "Bogdan",
-									"type": "text"
-								},
-								{
-									"key": "auth_token",
-									"value": "{{token}}",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://116.203.27.46:5002/test_pet_info",
-							"protocol": "http",
-							"host": [
-								"116",
-								"203",
-								"27",
-								"46"
-							],
-							"port": "5002",
-							"path": [
-								"test_pet_info"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "85"
-						},
-						{
-							"key": "Server",
-							"value": "Werkzeug/0.15.6 Python/3.8.5"
-						},
-						{
-							"key": "Date",
-							"value": "Mon, 14 Jun 2021 22:00:12 GMT"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"age\": 24,\n    \"daily_food\": 0.78,\n    \"daily_sleep\": 162.5,\n    \"name\": \"Bogdan\"\n}"
-				}
-			]
+			"response": []
 		},
 		{
 			"name": "get_test_user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Проверка структуры json в ответе.\r",
+							"\r",
+							"let schema_get_test_user =\r",
+							"{\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"age\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"family\": {\r",
+							"      \"type\": \"object\",\r",
+							"      \"properties\": {\r",
+							"        \"children\": {\r",
+							"          \"type\": \"array\",\r",
+							"          \"items\": [\r",
+							"            {\r",
+							"              \"type\": \"array\",\r",
+							"              \"items\": [\r",
+							"                {\r",
+							"                  \"type\": \"string\"\r",
+							"                },\r",
+							"                {\r",
+							"                  \"type\": \"integer\"\r",
+							"                }\r",
+							"              ]\r",
+							"            },\r",
+							"            {\r",
+							"              \"type\": \"array\",\r",
+							"              \"items\": [\r",
+							"                {\r",
+							"                  \"type\": \"string\"\r",
+							"                },\r",
+							"                {\r",
+							"                  \"type\": \"integer\"\r",
+							"                }\r",
+							"              ]\r",
+							"            }\r",
+							"          ]\r",
+							"        },\r",
+							"        \"u_salary_1_5_year\": {\r",
+							"          \"type\": \"integer\"\r",
+							"        }\r",
+							"      },\r",
+							"      \"required\": [\r",
+							"        \"children\",\r",
+							"        \"u_salary_1_5_year\"\r",
+							"      ]\r",
+							"    },\r",
+							"    \"name\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"salary\": {\r",
+							"      \"type\": \"integer\"\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\r",
+							"    \"age\",\r",
+							"    \"family\",\r",
+							"    \"name\",\r",
+							"    \"salary\"\r",
+							"  ]\r",
+							"}\r",
+							"\r",
+							"pm.test(\"Validate schema\", function () {pm.response.to.have.jsonSchema(schema_get_test_user)});\r",
+							"\r",
+							"\r",
+							"//Проверить что занчение поля name = значению переменной name из окружения\r",
+							"pm.environment.set(\"name_variable\", pm.response.json().name);\r",
+							"pm.test(\"Value name from response equal variable name from environment\", function () {\r",
+							"    pm.expect(pm.response.json().name).to.eql(pm.variables.get(\"name_variable\"));\r",
+							"});\r",
+							" \r",
+							"//Проверить что занчение поля age в ответе соответсвует отправленному в запросе значению поля age\r",
+							"pm.test(\"Value age from response equal value age from request\", function () {\r",
+							"    pm.expect(pm.response.json().age).to.eql(request.data.age);})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -599,80 +490,86 @@
 					]
 				}
 			},
-			"response": [
-				{
-					"name": "saved response get_test_user",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "age",
-									"value": "24",
-									"type": "text"
-								},
-								{
-									"key": "salary",
-									"value": "{{salary_test1}}",
-									"type": "text"
-								},
-								{
-									"key": "name",
-									"value": "Bogdan",
-									"type": "text"
-								},
-								{
-									"key": "auth_token",
-									"value": "{{token}}",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://116.203.27.46:5002/get_test_user",
-							"protocol": "http",
-							"host": [
-								"116",
-								"203",
-								"27",
-								"46"
-							],
-							"port": "5002",
-							"path": [
-								"get_test_user"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "228"
-						},
-						{
-							"key": "Server",
-							"value": "Werkzeug/0.15.6 Python/3.8.5"
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 15 Jun 2021 15:10:59 GMT"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"age\": \"24\",\n    \"family\": {\n        \"children\": [\n            [\n                \"Alex\",\n                24\n            ],\n            [\n                \"Kate\",\n                12\n            ]\n        ],\n        \"u_salary_1_5_year\": 960000\n    },\n    \"name\": \"Bogdan\",\n    \"salary\": 240000\n}"
-				}
-			]
+			"response": []
 		},
 		{
 			"name": "currency",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = JSON.parse (responseBody)\r",
+							"pm.environment.set(\"currency_ID\", jsonData[5].Cur_ID);\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "auth_token",
+							"value": "{{token}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://116.203.27.46:5002/currency",
+					"protocol": "http",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"currency"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "currency (new test)",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = JSON.parse (responseBody)\r",
+							"function getRandomInt(min, max) {\r",
+							"        min = Math.ceil(min);\r",
+							"        max = Math.floor(max);\r",
+							"        return Math.floor(Math.random() * (max - min)) + min;\r",
+							"};\r",
+							"    pm.environment.set(\"currency_ID\", jsonData[getRandomInt (1,100)].Cur_ID) ;\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -709,13 +606,19 @@
 				"method": "POST",
 				"header": [],
 				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"auth_token\": \"{{token}}\",\r\n    \"curr_code\": 39\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "auth_token",
+							"value": "{{token}}",
+							"type": "text"
+						},
+						{
+							"key": "curr_code",
+							"value": "27",
+							"type": "text"
 						}
-					}
+					]
 				},
 				"url": {
 					"raw": "http://116.203.27.46:5002/curr_byn",
