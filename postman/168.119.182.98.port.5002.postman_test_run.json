@@ -1,18 +1,18 @@
 {
-	"id": "22f51b5a-9ea1-4ed2-ace5-10645206508f",
-	"name": "http://116.203.27.46:5002/",
-	"timestamp": "2021-06-15T15:14:38.331Z",
+	"id": "e15e370f-1d1d-47da-8eee-6b4decb26408",
+	"name": "http://168.119.182.98:5002",
+	"timestamp": "2021-06-20T10:01:41.175Z",
 	"collection_id": "2d340273-9e94-4b55-99c0-748231b304a2",
 	"folder_id": 0,
 	"environment_id": "ce609b4c-d13c-4835-9d3e-a3d112fbd718",
-	"totalPass": 14,
-	"totalFail": 1,
+	"totalPass": 21,
+	"totalFail": 0,
 	"results": [
 		{
 			"id": "6f1cfa5a-aa89-4b4e-a925-938805d0f999",
 			"name": "login",
-			"url": "http://116.203.27.46:5002/login",
-			"time": 94,
+			"url": "http://168.119.182.98:5002/login",
+			"time": 186,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -27,7 +27,7 @@
 				}
 			},
 			"times": [
-				94
+				186
 			],
 			"allTests": [
 				{
@@ -38,8 +38,8 @@
 		{
 			"id": "565252ef-f78d-4dc6-8a79-e4d3a974be9b",
 			"name": "login (new test)",
-			"url": "http://116.203.27.46:5002/login",
-			"time": 357,
+			"url": "http://168.119.182.98:5002/login",
+			"time": 117,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -54,7 +54,7 @@
 				}
 			},
 			"times": [
-				357
+				117
 			],
 			"allTests": [
 				{
@@ -65,8 +65,8 @@
 		{
 			"id": "61fcf032-9e11-4849-8924-d5978f0b0ef1",
 			"name": "user_info",
-			"url": "http://116.203.27.46:5002/user_info",
-			"time": 96,
+			"url": "http://168.119.182.98:5002/user_info",
+			"time": 116,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -91,7 +91,7 @@
 				}
 			},
 			"times": [
-				96
+				116
 			],
 			"allTests": [
 				{
@@ -104,8 +104,8 @@
 		{
 			"id": "be5e4a70-b0a2-4d2f-a0ff-046c2165c847",
 			"name": "new_data",
-			"url": "http://116.203.27.46:5002/new_data",
-			"time": 95,
+			"url": "http://168.119.182.98:5002/new_data",
+			"time": 110,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -135,7 +135,7 @@
 				}
 			},
 			"times": [
-				95
+				110
 			],
 			"allTests": [
 				{
@@ -149,8 +149,8 @@
 		{
 			"id": "e0df8e25-942b-45c8-bf20-d4d0350058ad",
 			"name": "test_pet_info",
-			"url": "http://116.203.27.46:5002/test_pet_info",
-			"time": 91,
+			"url": "http://168.119.182.98:5002/test_pet_info",
+			"time": 103,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -175,7 +175,7 @@
 				}
 			},
 			"times": [
-				91
+				103
 			],
 			"allTests": [
 				{
@@ -188,8 +188,53 @@
 		{
 			"id": "3d383a4e-c544-411e-9b64-660da81c2e8b",
 			"name": "get_test_user",
-			"url": "http://116.203.27.46:5002/get_test_user",
-			"time": 102,
+			"url": "http://168.119.182.98:5002/get_test_user",
+			"time": 109,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is OK and format is JSON": true,
+				"Validate schema": true,
+				"Value name from response equal variable name from environment": true,
+				"Value age from response equal value age from request": true
+			},
+			"testPassFailCounts": {
+				"Status code is OK and format is JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Value name from response equal variable name from environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Value age from response equal value age from request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				109
+			],
+			"allTests": [
+				{
+					"Status code is OK and format is JSON": true,
+					"Validate schema": true,
+					"Value name from response equal variable name from environment": true,
+					"Value age from response equal value age from request": true
+				}
+			]
+		},
+		{
+			"id": "f9415968-106f-4a2b-9007-0d886804427f",
+			"name": "currency",
+			"url": "http://168.119.182.98:5002/currency",
+			"time": 616,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -204,7 +249,7 @@
 				}
 			},
 			"times": [
-				102
+				616
 			],
 			"allTests": [
 				{
@@ -213,10 +258,10 @@
 			]
 		},
 		{
-			"id": "f9415968-106f-4a2b-9007-0d886804427f",
-			"name": "currency",
-			"url": "http://116.203.27.46:5002/currency",
-			"time": 582,
+			"id": "e979485d-be16-4926-b377-78799207b735",
+			"name": "currency (new test)",
+			"url": "http://168.119.182.98:5002/currency",
+			"time": 617,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -231,7 +276,7 @@
 				}
 			},
 			"times": [
-				582
+				617
 			],
 			"allTests": [
 				{
@@ -242,33 +287,66 @@
 		{
 			"id": "47681093-48e7-4d4f-95cc-da1405701096",
 			"name": "curr_byn",
-			"url": "http://116.203.27.46:5002/curr_byn",
-			"time": 142,
+			"url": "http://168.119.182.98:5002/curr_byn",
+			"time": 361,
 			"responseCode": {
-				"code": 500,
-				"name": "INTERNAL SERVER ERROR"
+				"code": 200,
+				"name": "OK"
 			},
 			"tests": {
-				"Status code is OK and format is JSON": false
+				"Status code is OK and format is JSON": true,
+				"Validate schema": true
 			},
 			"testPassFailCounts": {
 				"Status code is OK and format is JSON": {
-					"pass": 0,
-					"fail": 1
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate schema": {
+					"pass": 1,
+					"fail": 0
 				}
 			},
 			"times": [
-				142
+				361
 			],
 			"allTests": [
 				{
-					"Status code is OK and format is JSON": false
+					"Status code is OK and format is JSON": true,
+					"Validate schema": true
+				}
+			]
+		},
+		{
+			"id": "6616ea71-de78-485f-8c5d-d4c05d7fcddd",
+			"name": "currency *** final",
+			"url": "http://168.119.182.98:5002/currency",
+			"time": 543,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is OK and format is JSON": true
+			},
+			"testPassFailCounts": {
+				"Status code is OK and format is JSON": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				543
+			],
+			"allTests": [
+				{
+					"Status code is OK and format is JSON": true
 				}
 			]
 		}
 	],
 	"count": 1,
-	"totalTime": 1559,
+	"totalTime": 2878,
 	"collection": {
 		"requests": [
 			{
@@ -300,7 +378,15 @@
 				"method": "POST"
 			},
 			{
+				"id": "e979485d-be16-4926-b377-78799207b735",
+				"method": "POST"
+			},
+			{
 				"id": "47681093-48e7-4d4f-95cc-da1405701096",
+				"method": "POST"
+			},
+			{
+				"id": "6616ea71-de78-485f-8c5d-d4c05d7fcddd",
 				"method": "POST"
 			}
 		]
