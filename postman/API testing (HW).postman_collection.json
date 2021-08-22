@@ -1,10 +1,204 @@
 {
 	"info": {
 		"_postman_id": "2d340273-9e94-4b55-99c0-748231b304a2",
-		"name": "http://168.119.182.98:5002",
+		"name": "API testing (HW)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
+		{
+			"name": "get_method",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/get_method?name=Bogdan&age=25",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"get_method"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Bogdan"
+						},
+						{
+							"key": "age",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_info_2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Bogdan",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "60000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/user_info_3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user_info_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_info_3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Bogdan",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "60000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/user_info_3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user_info_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "object_info_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/object_info_1?name=Bogdan&age=25&weight=65",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"object_info_1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Bogdan"
+						},
+						{
+							"key": "age",
+							"value": "25"
+						},
+						{
+							"key": "weight",
+							"value": "65"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "object_info_3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/object_info_3?name=Bogdan&age=25&salary=60000",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"object_info_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Bogdan"
+						},
+						{
+							"key": "age",
+							"value": "25"
+						},
+						{
+							"key": "salary",
+							"value": "60000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "object_info_4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/object_info_4?name=Bogdan&age=25&salary=60000",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"object_info_4"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Bogdan"
+						},
+						{
+							"key": "age",
+							"value": "25"
+						},
+						{
+							"key": "salary",
+							"value": "60000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
 		{
 			"name": "login",
 			"event": [
@@ -13,52 +207,7 @@
 					"script": {
 						"exec": [
 							"//Приходящий токен необходимо передать во все остальные запросы\r",
-							"    let jsonData = JSON.parse (responseBody);\r",
-							"postman.setEnvironmentVariable (\"token\", jsonData.token);"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "login",
-							"value": "log",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "pass",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{url}}/login",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"login"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "login (new test)",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"//Приходящий токен необходимо передать во все остальные запросы\r",
-							"    pm.environment.set(\"auth_token\", pm.response.json().token);\r",
+							"    pm.environment.set(\"token\", pm.response.json().token);\r",
 							""
 						],
 						"type": "text/javascript"
@@ -73,12 +222,12 @@
 					"formdata": [
 						{
 							"key": "login",
-							"value": "log",
+							"value": "Bogdan",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "pass",
+							"value": "Qwerty123",
 							"type": "text"
 						}
 					]
@@ -204,7 +353,7 @@
 							"        }\r",
 							"     },\r",
 							"        \"required\": [\"age\",\"name\",\"salary\"],\r",
-							"        \"additionalPropertis\": false\r",
+							"        \"additionalProperties\": false\r",
 							"}\r",
 							"\r",
 							"pm.test(\"Validate schema\", () => {pm.response.to.have.jsonSchema(schema_test_new_data)})\r",
@@ -422,10 +571,13 @@
 							"    pm.test(\"Value name from response equal variable name from environment\", function () {\r",
 							"    pm.expect(pm.response.json().name).to.eql(pm.variables.get(\"name_variable\"));\r",
 							"});\r",
+							"console.log(pm.variables.get(\"name_variable\"))\r",
 							" \r",
 							"//Проверить что значение поля age в ответе соответсвует отправленному в запросе значению поля age\r",
 							"    pm.test(\"Value age from response equal value age from request\", function () {\r",
-							"    pm.expect(pm.response.json().age).to.eql(request.data.age);})"
+							"    pm.expect(pm.response.json().age).to.eql(request.data.age);})\r",
+							"   \r",
+							"    "
 						],
 						"type": "text/javascript"
 					}
@@ -473,53 +625,6 @@
 		},
 		{
 			"name": "currency",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"\r",
-							"// Можете взять любой объект из присланного списка, используйте js random\r",
-							"    const randomObject = pm.response.json();\r",
-							"    let randomID = randomObject [Math.floor(Math.random()*randomObject.length)\r",
-							"];\r",
-							"\r",
-							"// В объекте возьмите Cur_ID и передать через окружение в следующий запрос\r",
-							"    pm.environment.set('currency_ID', randomID.Cur_ID);\r",
-							"console.log(randomID.Cur_ID);\r",
-							"console.log(randomObject.length)"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "auth_token",
-							"value": "{{token}}",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{url}}/currency",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"currency"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "currency (new test)",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -641,22 +746,44 @@
 			"response": []
 		},
 		{
-			"name": "currency ***",
+			"name": "exercise ***",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
 						"exec": [
+							"var jsonData = pm.response.json();\r",
 							"\r",
-							"// Можете взять любой объект из присланного списка, используйте js random\r",
-							"    const randomObject = pm.response.json();\r",
-							"    let randomID = randomObject [Math.floor(Math.random()*randomObject.length)\r",
-							"];\r",
+							"let arr = jsonData;\r",
 							"\r",
-							"// В объекте возьмите Cur_ID и передать через окружение в следующий запрос\r",
-							"    pm.environment.set('currency_ID', randomID.Cur_ID);\r",
-							"console.log(randomID.Cur_ID);\r",
+							"for ( let i = 0; i < arr.length; i++ ) { \r",
+							"    \r",
+							"    let currencyObj = arr[i];\r",
+							"    let currencyArr = Object.values(currencyObj);\r",
+							"    let currencyID = currencyArr[1];\r",
+							"    \r",
+							"        pm.sendRequest({\r",
+							"            url: 'http://162.55.220.72:5005/curr_byn',\r",
+							"            method: 'POST',\r",
+							"            headers: {},\r",
+							"            body: {\r",
+							"                mode: 'formdata',\r",
+							"                formdata: [\r",
+							"                    {key: 'auth_token', value: pm.environment.get(\"token\")},\r",
+							"                    {key: 'curr_code', value: currencyID}\r",
+							"                ] \r",
+							"            }\r",
 							"\r",
+							"        }, function(err, res) {\r",
+							"            let statusCode = Object.values(res)[3];\r",
+							"            if (statusCode === 200) {\r",
+							"                let resultCurrency = res.json();\r",
+							"                if ('undefined' !== typeof resultCurrency.Cur_OfficialRate) {\r",
+							"                    console.log(resultCurrency);\r",
+							"                }       \r",
+							"            } \r",
+							"        }); \r",
+							"};\r",
 							""
 						],
 						"type": "text/javascript"
@@ -683,329 +810,6 @@
 					],
 					"path": [
 						"currency"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "currency *** final",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.sendRequest({\r",
-							"        url: pm.environment.get(\"url\")+\"/curr_byn\",\r",
-							"        method: \"POST\",\r",
-							"        body: {\r",
-							"            mode: \"formdata\",\r",
-							"            formdata: [\r",
-							"                {key: \"auth_token\", value: pm.environment.get(\"token\")},\r",
-							"                {key: \"curr_code\", value: pm.environment.get(\"currency_ID\")}]\r",
-							"             }\r",
-							"    }, function(err, res) {\r",
-							"        if ([\"code\"]===500) {}\r",
-							"        else if (res[\"code\"]===200) {\r",
-							"            var response = res.json()\r",
-							"            if (response[\"Cur_OfficialRate\"]) {\r",
-							"                console.log(response);\r",
-							"                         \r",
-							"        }\r",
-							"    }\r",
-							"})}"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "auth_token",
-							"value": "{{token}}",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{url}}/currency",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"currency"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "currency *** Copy",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							" const randomObject = pm.response.json();\r",
-							"    let randomID = randomObject [Math.floor(Math.random()*randomObject.length)\r",
-							"];\r",
-							"\r",
-							"// В объекте возьмите Cur_ID и передать через окружение в следующий запрос\r",
-							"    pm.environment.set('currency_ID', randomID.Cur_ID);\r",
-							"console.log(randomID.Cur_ID);\r",
-							"console.log(randomObject.length)\r",
-							"\r",
-							"pm.sendRequest(\r",
-							"    {\r",
-							"        url: pm.environment.get(\"url\")+\"/curr_byn\",\r",
-							"        method: \"POST\",\r",
-							"        body: {\r",
-							"            mode: \"formdata\",\r",
-							"            formdata: [\r",
-							"                {key: \"auth_token\", value: pm.environment.get(\"token\")},\r",
-							"                {key: \"curr_code\", value: pm.environment.get(\"currency_ID\")}]\r",
-							"             }\r",
-							"    }, function(error, response) {\r",
-							"        if (pm.response.to.have.status(200)) {let data = pm.response.json()\r",
-							"            if (data[\"Cur_OfficialRate\"])\r",
-							"            {console.log(data)}}\r",
-							"        else if (pm.response.to.have.status(500)) {\r",
-							"            for (let i=1; i < 227; i++) {pm.sendRequest(\r",
-							"    {\r",
-							"        url: pm.environment.get(\"url\")+\"/curr_byn\",\r",
-							"        method: \"POST\",\r",
-							"        body: {\r",
-							"            mode: \"formdata\",\r",
-							"            formdata: [\r",
-							"                {key: \"auth_token\", value: pm.environment.get(\"token\")},\r",
-							"                {key: \"curr_code\", value: pm.environment.get(\"currency_ID\")}]\r",
-							"             }\r",
-							"    })}}\r",
-							"        \r",
-							"        \r",
-							"        \r",
-							"        \r",
-							"        })"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "auth_token",
-							"value": "{{token}}",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{url}}/currency",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"currency"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "currency *** Copy 3",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							" const randomObject = pm.response.json();\r",
-							"    let randomID = randomObject [Math.floor(Math.random()*randomObject.length)\r",
-							"];\r",
-							"\r",
-							"// В объекте возьмите Cur_ID и передать через окружение в следующий запрос\r",
-							"    pm.environment.set('currency_ID', randomID.Cur_ID);\r",
-							"console.log(randomID.Cur_ID);\r",
-							"console.log(randomObject.length)\r",
-							"\r",
-							"pm.sendRequest(\r",
-							"    {\r",
-							"        url: pm.environment.get(\"url\")+\"/curr_byn\",\r",
-							"        method: \"POST\",\r",
-							"        body: {\r",
-							"            mode: \"formdata\",\r",
-							"            formdata: [\r",
-							"                {key: \"auth_token\", value: pm.environment.get(\"token\")},\r",
-							"                {key: \"curr_code\", value: pm.environment.get(\"currency_ID\")}]\r",
-							"             }\r",
-							"    }, function(error, response) {\r",
-							"        if (pm.response.to.have.status(200)) {let data = pm.response.json()\r",
-							"            if (data[\"Cur_OfficialRate\"])\r",
-							"            {console.log(data)}}\r",
-							"        else if (pm.response.to.have.status(500)) {\r",
-							"            for (let i=1; i < 227; i++) {pm.sendRequest(\r",
-							"    {\r",
-							"        url: pm.environment.get(\"url\")+\"/curr_byn\",\r",
-							"        method: \"POST\",\r",
-							"        body: {\r",
-							"            mode: \"formdata\",\r",
-							"            formdata: [\r",
-							"                {key: \"auth_token\", value: pm.environment.get(\"token\")},\r",
-							"                {key: \"curr_code\", value: pm.environment.get(\"currency_ID\")}]\r",
-							"             }\r",
-							"    })}}\r",
-							"        \r",
-							"        \r",
-							"        \r",
-							"        \r",
-							"        })"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "auth_token",
-							"value": "{{token}}",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{url}}/currency",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"currency"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "currency *** Copy 2",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"\r",
-							"// Можете взять любой объект из присланного списка, используйте js random\r",
-							"    const randomObject = pm.response.json();\r",
-							"    let randomID = randomObject [Math.floor(Math.random()*randomObject.length)\r",
-							"];\r",
-							"\r",
-							"// В объекте возьмите Cur_ID и передать через окружение в следующий запрос\r",
-							"    pm.environment.set('currency_ID', randomID.Cur_ID);\r",
-							"console.log(randomID.Cur_ID);\r",
-							"\r",
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "auth_token",
-							"value": "{{token}}",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{url}}/currency",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"currency"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "curr_byn***",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"let schema_curr_byn = {\r",
-							"    \"type\": \"object\",\r",
-							"    \"properties\": {\r",
-							"        \"Cur_Abbreviation\": {\"type\": \"string\"},\r",
-							"        \"Cur_ID\": {\"type\": \"integer\"},\r",
-							"        \"Cur_Name\": {\"type\": \"string\"},\r",
-							"        \"Cur_OfficialRate\": {\"type\": \"number\"},\r",
-							"        \"Cur_Scale\": {\"type\": \"integer\"},\r",
-							"        \"Date\": {\"type\": \"string\"}},\r",
-							"    \"required\": [\"Cur_Abbreviation\", \"Cur_ID\", \"Cur_Name\", \"Cur_OfficialRate\", \"Cur_Scale\", \"Date\"],\r",
-							"    \"additionalProperties\": false}\r",
-							"\r",
-							"pm.test(\"Validate schema\", function () {pm.response.to.have.jsonSchema(schema_curr_byn)});\r",
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "auth_token",
-							"value": "{{token}}",
-							"type": "text"
-						},
-						{
-							"key": "curr_code",
-							"value": "{{currency_ID}}",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{url}}/curr_byn",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"curr_byn"
 					]
 				}
 			},
@@ -1028,7 +832,7 @@
 				"type": "text/javascript",
 				"exec": [
 					"pm.test(\"Status code is OK and format is JSON\", function () {",
-					"    pm.response.to.be.ok;",
+					"    pm.response.to.have.status(200);",
 					"    pm.response.to.be.json;",
 					"});",
 					""
